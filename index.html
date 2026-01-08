@@ -16,67 +16,59 @@ body{
 
 h1{
   text-align:center;
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
-/* OPTION CARDS */
+/* cards */
 .card{
   display:flex;
   align-items:center;
   gap:15px;
   padding:15px;
-  border-radius:18px;
+  border-radius:16px;
   margin:15px 0;
   cursor:pointer;
-  box-shadow:0 10px 25px rgba(0,0,0,0.6);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.03);
+  box-shadow:0 8px 20px rgba(0,0,0,0.6);
 }
 
 .card img{
-  width:70px;
-  height:70px;
+  width:60px;
+  height:60px;
 }
 
-/* THEMES */
-.java{background:linear-gradient(135deg,#f97316,#ea580c);}
-.python{background:linear-gradient(135deg,#2563eb,#1e40af);}
-.dsa{background:linear-gradient(135deg,#16a34a,#166534);}
-.project{background:linear-gradient(135deg,#9333ea,#6b21a8);}
-.showcase{background:linear-gradient(135deg,#14b8a6,#0f766e);}
-.intern{background:linear-gradient(135deg,#eab308,#a16207);}
-.interview{background:linear-gradient(135deg,#ef4444,#7f1d1d);}
+/* themes */
+.java{background:#f97316;}
+.python{background:#2563eb;}
+.dsa{background:#16a34a;}
+.project{background:#9333ea;}
+.showcase{background:#14b8a6;}
+.intern{background:#eab308;}
+.interview{background:#ef4444;}
 
-/* MODAL */
+/* modal */
 .modal{
   display:none;
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset:0;
   background:#020617;
   padding:20px;
   overflow:auto;
-  z-index:100;
+  z-index:10;
 }
 
-.close{
-  font-size:18px;
+.back{
   background:#38bdf8;
   color:black;
   padding:10px 15px;
-  border-radius:12px;
+  border-radius:10px;
   display:inline-block;
-  margin-bottom:20px;
+  margin-bottom:15px;
   cursor:pointer;
+  font-weight:bold;
 }
 
 h2{color:#38bdf8;}
-ul{line-height:1.9;}
+ul{line-height:1.8;}
 </style>
 </head>
 
@@ -84,154 +76,145 @@ ul{line-height:1.9;}
 
 <h1>🚀 Get Job by End of 2nd Year</h1>
 
-<div class="card java" onclick="openModal('java')">
+<div class="card java" onclick="openPage('java')">
   <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
   <h3>Master Java Programming</h3>
 </div>
 
-<div class="card python" onclick="openModal('python')">
+<div class="card python" onclick="openPage('python')">
   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
   <h3>Master Python Programming</h3>
 </div>
 
-<div class="card dsa" onclick="openModal('dsa')">
+<div class="card dsa" onclick="openPage('dsa')">
   <img src="https://cdn-icons-png.flaticon.com/512/2721/2721272.png">
   <h3>Learn Data Structures</h3>
 </div>
 
-<div class="card project" onclick="openModal('projects')">
+<div class="card project" onclick="openPage('project')">
   <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
   <h3>Build Mini Projects</h3>
 </div>
 
-<div class="card showcase" onclick="openModal('showcase')">
+<div class="card showcase" onclick="openPage('showcase')">
   <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
   <h3>Showcase Your Work</h3>
 </div>
 
-<div class="card intern" onclick="openModal('intern')">
+<div class="card intern" onclick="openPage('intern')">
   <img src="https://cdn-icons-png.flaticon.com/512/1077/1077976.png">
   <h3>Apply for Internships</h3>
 </div>
 
-<div class="card interview" onclick="openModal('interview')">
+<div class="card interview" onclick="openPage('interview')">
   <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
   <h3>Interview Questions</h3>
 </div>
 
-<!-- JAVA -->
+<!-- Java -->
 <div id="java" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
+  <div class="back" onclick="closeAll()">⬅ Back</div>
   <h2>Java for Jobs</h2>
   <ul>
-    <li>Core Java & OOP concepts</li>
-    <li>Collections & Generics</li>
+    <li>Core Java & OOP</li>
+    <li>Collections Framework</li>
     <li>Exception Handling</li>
     <li>Multithreading</li>
     <li>JDBC</li>
-    <li>Spring Boot basics</li>
+    <li>Spring Boot Basics</li>
     <li>DSA using Java</li>
   </ul>
 </div>
 
-<!-- PYTHON -->
+<!-- Python -->
 <div id="python" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
+  <div class="back" onclick="closeAll()">⬅ Back</div>
   <h2>Python for Jobs</h2>
   <ul>
-    <li>Python basics & syntax</li>
+    <li>Python Basics</li>
     <li>OOP in Python</li>
-    <li>Data structures</li>
-    <li>File handling</li>
-    <li>Libraries (NumPy, Pandas)</li>
-    <li>Web basics (Flask/Django)</li>
-    <li>Automation scripting</li>
+    <li>Lists, Tuples, Dictionaries</li>
+    <li>File Handling</li>
+    <li>Flask / Django</li>
+    <li>Automation</li>
   </ul>
 </div>
 
 <!-- DSA -->
 <div id="dsa" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
-  <h2>Data Structures for Jobs</h2>
+  <div class="back" onclick="closeAll()">⬅ Back</div>
+  <h2>Data Structures</h2>
   <ul>
     <li>Arrays & Strings</li>
     <li>Linked Lists</li>
     <li>Stacks & Queues</li>
     <li>Trees & Graphs</li>
     <li>Sorting & Searching</li>
-    <li>Recursion</li>
     <li>Time Complexity</li>
   </ul>
 </div>
 
-<!-- PROJECTS -->
-<div id="projects" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
-  <h2>Mini Project Ideas</h2>
+<!-- Projects -->
+<div id="project" class="modal">
+  <div class="back" onclick="closeAll()">⬅ Back</div>
+  <h2>Mini Projects</h2>
   <ul>
     <li>Student Management System</li>
-    <li>Job Portal Website</li>
-    <li>Online Quiz App</li>
+    <li>Job Portal</li>
     <li>Expense Tracker</li>
-    <li>Weather App</li>
+    <li>Quiz Application</li>
     <li>Portfolio Website</li>
-    <li>Library Management</li>
-    <li>Chat Application</li>
-    <li>Attendance System</li>
-    <li>To-Do List App</li>
   </ul>
 </div>
 
-<!-- SHOWCASE -->
+<!-- Showcase -->
 <div id="showcase" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
+  <div class="back" onclick="closeAll()">⬅ Back</div>
   <h2>Showcase Your Work</h2>
   <ul>
-    <li>Create GitHub repository</li>
-    <li>Upload clean code</li>
-    <li>Add README file</li>
-    <li>Link projects to LinkedIn</li>
-    <li>Show problem-solving skills</li>
+    <li>GitHub repositories</li>
+    <li>Clean code</li>
+    <li>README files</li>
+    <li>LinkedIn profile</li>
   </ul>
 </div>
 
-<!-- INTERNSHIPS -->
+<!-- Internships -->
 <div id="intern" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
-  <h2>Free Internship Platforms</h2>
+  <div class="back" onclick="closeAll()">⬅ Back</div>
+  <h2>Free Internships</h2>
   <ul>
     <li>Internshala</li>
     <li>AICTE Internship Portal</li>
-    <li>LetsGrowMore</li>
     <li>Bharat Intern</li>
-    <li>Google Summer of Code</li>
+    <li>LetsGrowMore</li>
   </ul>
 </div>
 
-<!-- INTERVIEW -->
+<!-- Interview -->
 <div id="interview" class="modal">
-  <div class="close" onclick="closeModal()">⬅ Back</div>
-  <h2>Most Repeated Interview Questions</h2>
+  <div class="back" onclick="closeAll()">⬅ Back</div>
+  <h2>Interview Questions</h2>
   <ul>
     <li>Tell me about yourself</li>
-    <li>Difference between Java & Python</li>
     <li>What is OOP?</li>
-    <li>What is a class & object?</li>
-    <li>What is data structure?</li>
-    <li>Explain project you did</li>
-    <li>What are your strengths?</li>
-    <li>What is time complexity?</li>
+    <li>Java vs Python</li>
+    <li>Explain your project</li>
     <li>Why should we hire you?</li>
   </ul>
 </div>
 
 <script>
-function openModal(id){
+function openPage(id){
+  closeAll();
   document.getElementById(id).style.display="block";
 }
 
-function closeModal(){
-  document.querySelectorAll('.modal').forEach(m=>m.style.display="none");
+function closeAll(){
+  var pages=document.getElementsByClassName("modal");
+  for(var i=0;i<pages.length;i++){
+    pages[i].style.display="none";
+  }
 }
 </script>
 
