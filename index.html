@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Job by End of 2nd Year</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f4ff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 30px;
+    }
+
+    .option {
+      background-color: #fff;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .option:hover {
+      background-color: #e0e7ff;
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: #f0f4ff;
+      border-left: 4px solid #1e3a8a;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 10px;
+    }
+
+    .content-inner {
+      padding: 10px 20px;
+    }
+
+    .sub-option {
+      background-color: #dbe4ff;
+      margin: 5px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: normal;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sub-option:hover {
+      background-color: #c3d0ff;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 5px 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Get Job by End of 2nd Year</h1>
+
+<!-- Option 1 -->
+<div class="option" onclick="toggleContent('masterLang', this)">
+  1) Master One Programming Language
+  <span class="arrow">&#9654;</span>
+</div>
+<div id="masterLang" class="content">
+  <div class="content-inner">
+    <div class="sub-option" onclick="toggleContent('java', this)">
+      Java <span class="arrow">&#9654;</span>
+    </div>
+    <div id="java" class="content">
+      <div class="content-inner">
+        <h3>Java for Jobs – What to Learn:</h3>
+        <ul>
+          <li>Core Java: OOP concepts (Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation)</li>
+          <li>Collections Framework (List, Set, Map)</li>
+          <li>Exception Handling</li>
+          <li>Multithreading & Concurrency</li>
+          <li>Java 8 Features: Streams, Lambda expressions, Optional</li>
+          <li>JDBC (Database Connectivity)</li>
+          <li>Basic Web Concepts: Servlets, JSP</li>
+          <li>Frameworks (Spring / Spring Boot basics)</li>
+          <li>Data Structures in Java</li>
+          <li>Problem Solving with Java (DS & Algorithms)</li>
+        </ul>
+        <h3>Java Interview Questions (Examples):</h3>
+        <ul>
+          <li>What is Java?</li>
+          <li>Features of Java</li>
+          <li>Explain OOP concepts</li>
+          <li>Difference between == and equals()</li>
+          <li>JVM, JRE, JDK difference</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-option" onclick="toggleContent('python', this)">
+      Python <span class="arrow">&#9654;</span>
+    </div>
+    <div id="python" class="content">
+      <div class="content-inner">
+        <h3>Python for Jobs – What to Learn:</h3>
+        <ul>
+          <li>Python Basics: Data types, Loops, Functions, Modules</li>
+          <li>OOP in Python</li>
+          <li>File Handling</li>
+          <li>Exception Handling</li>
+          <li>Python Libraries: NumPy, Pandas, Matplotlib, Requests</li>
+          <li>Web Frameworks: Django / Flask basics</li>
+          <li>Database Connectivity (SQLite / MySQL)</li>
+          <li>Problem Solving with Python (DS & Algorithms)</li>
+          <li>API Handling and Web Scraping</li>
+          <li>Automation Scripting</li>
+        </ul>
+        <h3>Python Interview Questions (Examples):</h3>
+        <ul>
+          <li>What is Python?</li>
+          <li>Key features of Python</li>
+          <li>Difference between list and tuple</li>
+          <li>Explain Python’s GIL</li>
+          <li>How to manage exceptions in Python</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option 2 -->
+<div class="option" onclick="toggleContent('ds', this)">
+  2) Learn Data Structure (Very Important)
+  <span class="arrow">&#9654;</span>
+</div>
+<div id="ds" class="content">
+  <div class="content-inner">
+    <ul>
+      <li>Arrays & Strings</li>
+      <li>Linked List (Singly, Doubly, Circular)</li>
+      <li>Stack & Queue</li>
+      <li>Trees (Binary Tree, BST, AVL, Trie)</li>
+      <li>Graphs (DFS, BFS, Weighted Graphs)</li>
+      <li>Hashing & HashMap</li>
+      <li>Searching (Linear, Binary)</li>
+      <li>Sorting (Bubble, Selection, Insertion, Merge, Quick)</li>
+      <li>Recursion problems</li>
+      <li>Time & Space Complexity Analysis</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Option 3 -->
+<div class="option" onclick="toggleContent('projects', this)">
+  3) Build Mini Projects
+  <span class="arrow">&#9654;</span>
+</div>
+<div id="projects" class="content">
+  <div class="content-inner">
+    <ul>
+      <li>Personal Portfolio Website</li>
+      <li>To-Do List Web App</li>
+      <li>Calculator App</li>
+      <li>Expense Tracker</li>
+      <li>Quiz App</li>
+      <li>Weather App (API-based)</li>
+      <li>Blogging Website</li>
+      <li>Chat Application (Basic)</li>
+      <li>Online Resume Builder</li>
+      <li>URL Shortener</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Option 4 -->
+<div class="option" onclick="toggleContent('showcase', this)">
+  4) Showcase Your Work Online
+  <span class="arrow">&#9654;</span>
+</div>
+<div id="showcase" class="content">
+  <div class="content-inner">
+    <ul>
+      <li>Create a GitHub profile to host your projects</li>
+      <li>Use LinkedIn to showcase skills and achievements</li>
+      <li>Make a portfolio website linking GitHub, LinkedIn, and mini projects</li>
+      <li>Share open-source contributions on GitHub</li>
+      <li>Add resume and contact info for recruiters</li>
+      <li>Participate in coding challenges and showcase certificates</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Option 5 -->
+<div class="option" onclick="toggleContent('internships', this)">
+  5) Apply for Internships
+  <span class="arrow">&#9654;</span>
+</div>
+<div id="internships" class="content">
+  <div class="content-inner">
+    <ul>
+      <li>Internshala (Various companies)</li>
+      <li>LetsIntern</li>
+      <li>LinkedIn Internships</li>
+      <li>Zoho Internship Program</li>
+      <li>Microsoft Student Internship</li>
+      <li>Adobe Hyderabad Internship</li>
+      <li>TCS iON Internship</li>
+      <li>Infosys InStep Program</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Option 6 -->
+<div class="option" onclick="toggleContent('interviewQ', this)">
+  6) Interview Questions
+  <span class="arrow">&#9654;</span>
+</div>
+<div id="interviewQ" class="content">
+  <div class="content-inner">
+    <ul>
+      <li>Tell me about yourself</li>
+      <li>Why should we hire you?</li>
+      <li>Strengths and weaknesses</li>
+      <li>Where do you see yourself in 5 years?</li>
+      <li>Why do you want to work here?</li>
+      <li>What is OOP?</li>
+      <li>Difference between == and equals() (Java)</li>
+      <li>Difference between list and tuple (Python)</li>
+      <li>Explain recursion with example</li>
+      <li>What is stack and queue?</li>
+      <li>Binary Tree explanation</li>
+      <li>Linked List explanation</li>
+      <li>Bubble sort explanation</li>
+      <li>Array vs ArrayList in Java</li>
+      <li>Explain your project briefly</li>
+      <li>MVC architecture</li>
+      <li>REST API</li>
+      <li>Multithreading in Java/Python</li>
+      <li>Stack vs Heap memory</li>
+      <li>SQL Injection and prevention</li>
+      <li>HTTP vs HTTPS</li>
+      <li>Polymorphism example</li>
+      <li>What is Git?</li>
+      <li>How to debug a program</li>
+      <li>Types of inheritance in Java</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleContent(id, elem) {
+    const content = document.getElementById(id);
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      if (elem) elem.querySelector('.arrow')?.classList.remove('rotate');
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      if (elem) elem.querySelector('.arrow')?.classList.add('rotate');
+    }
+  }
+</script>
+
+</body>
+</html>
