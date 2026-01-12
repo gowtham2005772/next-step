@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Job by End of 2nd Year</title>
-
-<style>
+<title>Get Job by End of 2nd Year</title><style>
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -16,207 +13,222 @@ body{
 
 h1{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:10px;
 }
 
-/* cards */
-.card{
+.subtitle{
+  text-align:center;
+  color:#94a3b8;
+  margin-bottom:30px;
+}
+
+.center{
   display:flex;
+  flex-direction:column;
   align-items:center;
-  gap:15px;
-  padding:15px;
-  border-radius:16px;
-  margin:15px 0;
+  gap:22px;
+}
+
+.card{
+  width:90%;
+  max-width:420px;
+  background:linear-gradient(135deg,#1e293b,#0f172a);
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
   cursor:pointer;
-  box-shadow:0 8px 20px rgba(0,0,0,0.6);
+  box-shadow:0 10px 25px rgba(0,0,0,0.7);
+  font-size:18px;
+  transition:0.3s;
 }
 
-.card img{
-  width:60px;
-  height:60px;
+.card:hover{
+  transform:scale(1.03);
+  background:linear-gradient(135deg,#334155,#1e293b);
 }
 
-/* themes */
-.java{background:#f97316;}
-.python{background:#2563eb;}
-.dsa{background:#16a34a;}
-.project{background:#9333ea;}
-.showcase{background:#14b8a6;}
-.intern{background:#eab308;}
-.interview{background:#ef4444;}
-
-/* modal */
 .modal{
   display:none;
   position:fixed;
   inset:0;
   background:#020617;
-  padding:20px;
+  padding:25px;
   overflow:auto;
-  z-index:10;
 }
 
 .back{
-  background:#38bdf8;
-  color:black;
-  padding:10px 15px;
-  border-radius:10px;
   display:inline-block;
-  margin-bottom:15px;
+  background:#38bdf8;
+  color:#020617;
+  padding:10px 18px;
+  border-radius:12px;
   cursor:pointer;
+  margin-bottom:20px;
   font-weight:bold;
 }
 
-h2{color:#38bdf8;}
-ul{line-height:1.8;}
-</style>
-</head>
+h2{
+  color:#38bdf8;
+  text-align:center;
+  margin-bottom:20px;
+}
 
-<body>
+ul{
+  line-height:2;
+  max-width:700px;
+  margin:auto;
+}
 
-<h1>🚀 Get Job by End of 2nd Year</h1>
-
-<div class="card java" onclick="openPage('java')">
-  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
-  <h3>Master Java Programming</h3>
-</div>
-
-<div class="card python" onclick="openPage('python')">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
-  <h3>Master Python Programming</h3>
-</div>
-
-<div class="card dsa" onclick="openPage('dsa')">
-  <img src="https://cdn-icons-png.flaticon.com/512/2721/2721272.png">
-  <h3>Learn Data Structures</h3>
-</div>
-
-<div class="card project" onclick="openPage('project')">
-  <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-  <h3>Build Mini Projects</h3>
-</div>
-
-<div class="card showcase" onclick="openPage('showcase')">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-  <h3>Showcase Your Work</h3>
-</div>
-
-<div class="card intern" onclick="openPage('intern')">
-  <img src="https://cdn-icons-png.flaticon.com/512/1077/1077976.png">
-  <h3>Apply for Internships</h3>
-</div>
-
-<div class="card interview" onclick="openPage('interview')">
-  <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-  <h3>Interview Questions</h3>
-</div>
-
-<!-- Java -->
-<div id="java" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Java for Jobs</h2>
+.motivation{
+  background:#0f172a;
+  border-left:4px solid #38bdf8;
+  padding:15px;
+  border-radius:10px;
+  margin:20px auto;
+  max-width:700px;
+  color:#cbd5f5;
+}
+</style></head><body><h1>🚀 Get Job by End of 2nd Year</h1>
+<p class="subtitle">A clear roadmap • Skills • Projects • Confidence</p><div class="center">
+  <div class="card" onclick="openPage('lang')">1️⃣ Master Any One Programming Language</div>
+  <div class="card" onclick="openPage('dsa')">2️⃣ Learn Data Structures (Must)</div>
+  <div class="card" onclick="openPage('projects')">3️⃣ Build Mini Projects</div>
+  <div class="card" onclick="openPage('showcase')">4️⃣ Showcase Your Skills Smartly</div>
+  <div class="card" onclick="openPage('intern')">5️⃣ Apply for Free Internships</div>
+  <div class="card" onclick="openPage('commonInterview')">6️⃣ Interview Questions (With Answers)</div>
+</div><!-- OPTION 1 --><div id="lang" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Choose One Language & Master It</h2>
+  <div class="motivation">Companies don’t expect many languages. They expect <b>strong basics in one language</b>.</div>
+  <div class="center">
+    <div class="card" onclick="openPage('java')">Java</div>
+    <div class="card" onclick="openPage('python')">Python</div>
+  </div>
+</div><!-- JAVA --><div id="java" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Java Roadmap</h2>
+  <div class="center">
+    <div class="card" onclick="openPage('javaLearn')">What to Learn in Java</div>
+    <div class="card" onclick="openPage('javaInterview')">Java Interview Q&A</div>
+  </div>
+</div><div id="javaLearn" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>What to Learn in Java (Job Ready)</h2>
   <ul>
-    <li>Core Java & OOP</li>
-    <li>Collections Framework</li>
-    <li>Exception Handling</li>
-    <li>Multithreading</li>
-    <li>JDBC</li>
-    <li>Spring Boot Basics</li>
-    <li>DSA using Java</li>
+    <li>Core Java: variables, loops, methods</li>
+    <li>OOP: class, object, inheritance, polymorphism</li>
+    <li>Collections: List, Set, Map</li>
+    <li>Exception handling & debugging</li>
+    <li>Multithreading basics</li>
+    <li>JDBC & database connection</li>
+    <li>Spring Boot fundamentals</li>
+    <li>DSA using Java (arrays, strings, recursion)</li>
   </ul>
-</div>
-
-<!-- Python -->
-<div id="python" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Python for Jobs</h2>
+</div><div id="javaInterview" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Java Interview Questions</h2>
   <ul>
-    <li>Python Basics</li>
-    <li>OOP in Python</li>
-    <li>Lists, Tuples, Dictionaries</li>
-    <li>File Handling</li>
-    <li>Flask / Django</li>
-    <li>Automation</li>
+    <li><b>Q:</b> What is Java?<br><b>A:</b> Platform-independent, object-oriented language.</li>
+    <li><b>Q:</b> What is JVM?<br><b>A:</b> Java Virtual Machine runs bytecode.</li>
+    <li><b>Q:</b> OOP concepts?<br><b>A:</b> Encapsulation, inheritance, polymorphism, abstraction.</li>
+    <li><b>Q:</b> == vs equals()?<br><b>A:</b> == compares memory, equals compares data.</li>
+    <li><b>Q:</b> What is constructor?<br><b>A:</b> Initializes object.</li>
   </ul>
-</div>
-
-<!-- DSA -->
-<div id="dsa" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Data Structures</h2>
+</div><!-- PYTHON --><div id="python" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Python Roadmap</h2>
+  <div class="center">
+    <div class="card" onclick="openPage('pythonLearn')">What to Learn in Python</div>
+    <div class="card" onclick="openPage('pythonInterview')">Python Interview Q&A</div>
+  </div>
+</div><div id="pythonLearn" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>What to Learn in Python (Job Ready)</h2>
+  <ul>
+    <li>Python syntax & logic building</li>
+    <li>Data types & control flow</li>
+    <li>Functions & OOP</li>
+    <li>Lists, tuples, dictionaries, sets</li>
+    <li>File handling</li>
+    <li>Libraries: NumPy, Pandas</li>
+    <li>Flask / Django basics</li>
+  </ul>
+</div><div id="pythonInterview" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Python Interview Questions</h2>
+  <ul>
+    <li><b>Q:</b> What is Python?<br><b>A:</b> High-level interpreted language.</li>
+    <li><b>Q:</b> List vs Tuple?<br><b>A:</b> List is mutable, tuple is immutable.</li>
+    <li><b>Q:</b> What is PEP8?<br><b>A:</b> Python coding standards.</li>
+    <li><b>Q:</b> What is virtual env?<br><b>A:</b> Isolated environment.</li>
+  </ul>
+</div><!-- DSA --><div id="dsa" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Data Structures for Jobs</h2>
   <ul>
     <li>Arrays & Strings</li>
-    <li>Linked Lists</li>
-    <li>Stacks & Queues</li>
-    <li>Trees & Graphs</li>
-    <li>Sorting & Searching</li>
-    <li>Time Complexity</li>
+    <li>Linked List</li>
+    <li>Stack & Queue</li>
+    <li>Searching & Sorting</li>
+    <li>Recursion</li>
+    <li>Basic Time Complexity</li>
   </ul>
-</div>
-
-<!-- Projects -->
-<div id="project" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Mini Projects</h2>
+</div><!-- PROJECTS --><div id="projects" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Mini Project Ideas</h2>
   <ul>
     <li>Student Management System</li>
-    <li>Job Portal</li>
+    <li>To-Do App</li>
     <li>Expense Tracker</li>
     <li>Quiz Application</li>
+    <li>Weather App</li>
+    <li>Job Portal UI</li>
     <li>Portfolio Website</li>
+    <li>Library System</li>
+    <li>Chat Application</li>
+    <li>Attendance System</li>
   </ul>
-</div>
-
-<!-- Showcase -->
-<div id="showcase" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Showcase Your Work</h2>
+</div><!-- SHOWCASE --><div id="showcase" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Showcase Your Skills</h2>
   <ul>
-    <li>GitHub repositories</li>
-    <li>Clean code</li>
-    <li>README files</li>
-    <li>LinkedIn profile</li>
+    <li>Create GitHub account</li>
+    <li>Upload projects with README</li>
+    <li>Write what you learned</li>
+    <li>Share your portfolio link</li>
   </ul>
-</div>
-
-<!-- Internships -->
-<div id="intern" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Free Internships</h2>
+</div><!-- INTERNSHIP --><div id="intern" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Apply for Free Internships</h2>
   <ul>
     <li>Internshala</li>
     <li>AICTE Internship Portal</li>
-    <li>Bharat Intern</li>
     <li>LetsGrowMore</li>
+    <li>Bharat Intern</li>
+    <li>SmartInternz</li>
   </ul>
-</div>
-
-<!-- Interview -->
-<div id="interview" class="modal">
-  <div class="back" onclick="closeAll()">⬅ Back</div>
-  <h2>Interview Questions</h2>
+</div><!-- COMMON INTERVIEW --><div id="commonInterview" class="modal">
+  <div class="back" onclick="goBack()">⬅ Back</div>
+  <h2>Most Asked Interview Questions</h2>
   <ul>
-    <li>Tell me about yourself</li>
-    <li>What is OOP?</li>
-    <li>Java vs Python</li>
-    <li>Explain your project</li>
-    <li>Why should we hire you?</li>
+    <li><b>Tell me about yourself</b> – Focus on skills & goals</li>
+    <li><b>Why should we hire you?</b> – Learning mindset</li>
+    <li><b>Explain your project</b> – Problem → solution → tech</li>
+    <li><b>Strengths & weaknesses</b> – Be honest</li>
   </ul>
-</div>
-
-<script>
+</div><script>
+let stack=[];
 function openPage(id){
-  closeAll();
-  document.getElementById(id).style.display="block";
+  document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+  stack.push(id);
+  document.getElementById(id).style.display='block';
 }
-
-function closeAll(){
-  var pages=document.getElementsByClassName("modal");
-  for(var i=0;i<pages.length;i++){
-    pages[i].style.display="none";
+function goBack(){
+  stack.pop();
+  document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+  if(stack.length>0){
+    document.getElementById(stack[stack.length-1]).style.display='block';
   }
 }
-</script>
-
-</body>
+</script></body>
 </html>
